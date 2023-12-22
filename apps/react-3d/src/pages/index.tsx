@@ -1,8 +1,9 @@
-import React, { PropsWithChildren, useRef, useState } from 'react';
-import { Canvas, useFrame, MeshProps } from '@react-three/fiber';
+import React, { useRef, useState } from 'react';
+import { MeshProps, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
 import { Mesh } from 'three';
+import { Studio } from '@react-3d-nx/core';
 
 function Box(props: MeshProps) {
   // This reference will give us direct access to the mesh
@@ -11,7 +12,7 @@ function Box(props: MeshProps) {
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
   // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame((state, delta) => (meshRef.current!.rotation.x += delta));
+  useFrame((state, delta) => (meshRef.current.rotation.x += delta));
   // Return view, these are regular three.js elements expressed in JSX
   return (
     <mesh
@@ -26,10 +27,6 @@ function Box(props: MeshProps) {
       <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
     </mesh>
   );
-}
-
-function Studio({ children }: PropsWithChildren) {
-  return <Canvas className="w-full h-full">{children}</Canvas>;
 }
 
 export default function Page() {

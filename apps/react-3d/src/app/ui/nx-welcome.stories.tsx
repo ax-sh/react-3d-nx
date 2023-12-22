@@ -4,9 +4,9 @@ import { NxWelcome } from './nx-welcome';
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
-import withAPIRequest from './with-api-request';
+import withAPIRequest from '../with-api-request';
 import { DefaultBodyType, http, HttpResponse, PathParams } from 'msw';
-import { TanStackQueryMockData } from '../mocks/tan-stack-query-mock.data';
+import { TanStackQueryMockData } from '../../mocks/tan-stack-query-mock.data';
 
 const meta: Meta<typeof NxWelcome> = {
   component: NxWelcome,
@@ -33,8 +33,8 @@ Primary.parameters = {
 
 export const Heading: Story = {
   args: {},
-  async play({ canvasElement }) {
+  play: function ({ canvasElement }) {
     const canvas = within(canvasElement);
-    await expect(canvas.getByText(/Welcome to NxWelcome!/gi)).toBeTruthy();
+    expect(canvas.getByText(/Welcome to NxWelcome!/gi)).toBeTruthy();
   },
 };
