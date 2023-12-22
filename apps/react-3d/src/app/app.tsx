@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Suspense } from 'react';
 import { useRoutes } from 'react-router-dom';
 
