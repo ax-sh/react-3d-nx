@@ -1,7 +1,7 @@
 import { initialize, mswLoader } from 'msw-storybook-addon';
 
 // Initialize MSW
-initialize();
+initialize({ serviceWorker: { url: '../public/mockServiceWorker.js' } });
 
 const preview = {
   parameters: {
