@@ -1,4 +1,4 @@
-import { useRepoDataQuery } from './use-repo-data-query';
+import { useRepoDataQuery } from '../hooks/queries/use-repo-data-query';
 
 export function NxWelcome({ title }: { title: string }) {
   const { isPending, error, data } = useRepoDataQuery();
