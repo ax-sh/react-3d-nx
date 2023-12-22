@@ -1,13 +1,7 @@
-import { useQuery } from '@tanstack/react-query';
+import { useRepoDataQuery } from './use-repo-data-query';
 
 export function NxWelcome({ title }: { title: string }) {
-  const { isPending, error, data } = useQuery({
-    queryKey: ['repoData'],
-    queryFn: () =>
-      fetch('https://api.github.com/repos/TanStack/query').then((res) =>
-        res.json()
-      ),
-  });
+  const { isPending, error, data } = useRepoDataQuery();
   if (isPending) return 'Loading...';
 
   if (error) return 'An error has occurred: ' + error.message;
