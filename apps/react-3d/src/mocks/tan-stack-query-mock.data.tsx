@@ -27,8 +27,7 @@ export const TanStackQueryMockData = {
     site_admin: false,
   },
   html_url: 'https://github.com/TanStack/query',
-  description:
-    '🤖 Powerful asynchronous state management, server-state utilities and data fetching for the web. TS/JS, React Query, Solid Query, Svelte Query and Vue Query.',
+  description: '  Query.',
   fork: false,
   url: 'https://api.github.com/repos/TanStack/query',
   forks_url: 'https://api.github.com/repos/TanStack/query/forks',
