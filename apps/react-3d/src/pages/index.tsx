@@ -1,3 +1,3 @@
 export default function Page() {
-  return <main>Home</main>;
+  return <main className="bg-indigo-500 p-2 font-mono">Home</main>;
 }
