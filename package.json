@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -37,11 +38,13 @@
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "jsdom": "~22.1.0",
+    "lint-staged": "^15.2.0",
     "nx": "17.2.6",
     "prettier": "^2.6.2",
     "sass": "^1.55.0",
     "typescript": "~5.2.2",
     "vite": "^5.0.0",
-    "vitest": "~0.34.6"
+    "vitest": "~0.34.6",
+    "husky": "^8.0.0"
   }
 }
