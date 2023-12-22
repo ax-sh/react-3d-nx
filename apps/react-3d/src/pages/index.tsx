@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { MeshProps, useFrame } from '@react-three/fiber';
+import { MeshProps, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
 import { Mesh } from 'three';
@@ -29,15 +29,29 @@ function Box(props: MeshProps) {
   );
 }
 
+function Viewer() {
+  const { camera } = useThree();
+  console.log(camera);
+  return (
+    <>
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      <Box position={[-1.2, 0, 0]} />
+      <Box position={[1.2, 0, 0]} />
+      <OrbitControls
+        onChange={() => {
+          console.log(camera.position);
+        }}
+      />
+    </>
+  );
+}
+
 export default function Page() {
   return (
     <section className="bg-black min-h-screen h-screen">
       <Studio>
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        <Box position={[-1.2, 0, 0]} />
-        <Box position={[1.2, 0, 0]} />
-        <OrbitControls />
+        <Viewer />
       </Studio>
     </section>
   );
