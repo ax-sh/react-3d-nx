@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "@react-three/drei": "^9.92.5",
     "@react-three/fiber": "^8.15.12",
     "@swc/helpers": "~0.5.2",
     "@types/three": "^0.159.0",
