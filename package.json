@@ -5,7 +5,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
-    "dev": "pnpm nx run react-3d:serve:development"
+    "dev": "pnpm nx run react-3d:serve:development",
+    "storybook": "pnpm nx run react-3d:storybook"
   },
   "private": true,
   "dependencies": {
