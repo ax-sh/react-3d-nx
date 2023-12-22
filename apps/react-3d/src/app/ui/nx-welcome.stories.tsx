@@ -33,8 +33,8 @@ Primary.parameters = {
 
 export const Heading: Story = {
   args: {},
-  async play({ canvasElement }) {
+  play: function ({ canvasElement }) {
     const canvas = within(canvasElement);
-    await expect(canvas.getByText(/Welcome to NxWelcome!/gi)).toBeTruthy();
+    expect(canvas.getByText(/Welcome to NxWelcome!/gi)).toBeTruthy();
   },
 };
