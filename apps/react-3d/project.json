@@ -57,6 +57,11 @@
       "outputs": ["{options.reportsDirectory}"],
       "options": {
         "reportsDirectory": "../../coverage/apps/react-3d"
+      },
+      "configurations": {
+        "watch": {
+          "watch": true
+        }
       }
     },
     "lint": {
