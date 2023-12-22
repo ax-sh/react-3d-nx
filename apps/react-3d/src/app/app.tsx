@@ -1,14 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
+import { Suspense } from 'react';
+import { useRoutes } from 'react-router-dom';
 
-import NxWelcome from './nx-welcome';
+import routes from '~react-pages';
 
 export function App() {
-  return (
-    <div>
-      <NxWelcome title="react-3d" />
-    </div>
-  );
+  return <Suspense fallback={<p>Loading...</p>}>{useRoutes(routes)}</Suspense>;
 }
 
 export default App;
