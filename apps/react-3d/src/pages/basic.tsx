@@ -48,7 +48,7 @@ const MainScene = () => {
             <OrbitControls />
           </PerspectiveCamera>
         </React.Suspense>
-      </Canvas>{' '}
+      </Canvas>
     </section>
   );
 };
